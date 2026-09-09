@@ -1,0 +1,5117 @@
+/*
+Theme Name: Hospital Theme
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/*=========================================
+Hero Banner
+=========================================*/
+
+.hero-banner {
+  width: 100%;
+  height: 680px;
+  background: url("/kims-site/wp-content/themes/hospital-theme/assets/banner1.png") top center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  /* uses the full column so "KIMS-SUNSHINE Heart Institute,"
+     has room to sit on one line */
+  max-width: 660px;
+  margin-left: auto;
+}
+.subtitle {
+  font-size: 21px;
+  color: #e31c48 !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Fluid so the institute name keeps its own line from 992px up
+   without ever outgrowing the column. Capped at 40px: the phrase
+   measures 611px there, leaving headroom for the wider Arial
+   fallback that Windows visitors get. */
+.hero-title {
+  font-size: clamp(30px, 2.8vw, 40px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1175ae;
+  margin-bottom: 22px;
+}
+
+.hero-title span {
+  display: block;
+  color: #e31c48;
+  white-space: nowrap;
+}
+
+/*=========================================
+Line
+=========================================*/
+
+.hero-line {
+  width: 180px;
+  height: 4px;
+  background: #1175ae;
+  margin: 30px 0;
+}
+
+/*=========================================
+Tagline
+=========================================*/
+
+.hero-tagline {
+  font-size: 42px;
+  font-weight: 700;
+  color: #e31c48;
+  margin-bottom: 40px;
+}
+
+/*=========================================
+Features
+=========================================*/
+
+.hero-features {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.feature-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-box i {
+  font-size: 28px;
+  color: #e31c48;
+}
+
+.feature-box p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+}
+
+/*=========================================
+Button
+=========================================*/
+
+.hero-btn {
+  display: inline-block;
+  background: #e31c48;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.hero-btn:hover {
+  background: #c4173c;
+  color: #fff;
+  text-decoration: none;
+}
+/*=========================================
+Responsive
+=========================================*/
+
+@media (max-width: 991px) {
+  .hero-banner {
+    height: auto;
+    padding: 30px 20px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 4.6vw, 38px);
+    text-align: center;
+  }
+
+  .hero-line {
+    margin: 20px auto;
+  }
+
+  /* the institute name may wrap once the column narrows —
+     nowrap here would force a horizontal scrollbar */
+  .hero-title span {
+    white-space: normal;
+  }
+
+  .hero-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .feature-box {
+    text-align: center;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 0;
+    width: auto;
+  }
+}
+@media (max-width: 576px) {
+  .hero-banner {
+    padding: 40px 15px;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-line {
+    margin: 18px auto;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .feature-box {
+    justify-content: center;
+    max-width: 260px;
+    width: 100%;
+  }
+
+  .hero-btn {
+    width: fit-content;
+    margin: 25px auto 0;
+  }
+}
+
+/* ================= HERO SECTION PREMIUM ================= */
+
+.hero {
+  padding: 100px 8%;
+}
+
+.hero-content {
+  /* max-width: 1250px; */
+
+  margin: auto;
+
+  /* padding: 70px; */
+
+  /* border-radius: 35px; */
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* FEATURES */
+
+.services {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin: 45px 0;
+}
+
+.services div {
+  background: #f7fcff;
+
+  padding: 30px 20px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #0095c8;
+
+  box-shadow: 0 15px 35px rgba(0, 149, 200, 0.12);
+
+  border-top: 5px solid #0095c8;
+
+  transition: 0.3s;
+}
+
+.services div:hover {
+  transform: translateY(-8px);
+
+  border-color: #ed174f;
+
+  color: #ed174f;
+}
+
+/* TAG LINE */
+
+.hero h3 {
+  font-size: 34px;
+
+  color: #ed174f;
+
+  margin-top: 40px;
+}
+
+/* EMERGENCY BOX */
+
+.emergency {
+  margin-top: 35px;
+
+  background: linear-gradient(135deg, #0095c8, #63c3bb);
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  box-shadow: 0 20px 45px rgba(0, 149, 200, 0.25);
+}
+
+.emergency h2 {
+  font-size: 30px;
+
+  color: white;
+}
+
+.emergency p {
+  font-size: 18px;
+
+  color: white;
+}
+
+.emergency b {
+  font-size: 28px;
+
+  color: white;
+}
+
+/* BUTTON */
+
+button {
+  margin-top: 45px;
+
+  background: #ed174f;
+
+  color: white;
+
+  border: none;
+
+  padding: 18px 50px;
+
+  border-radius: 50px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 15px 30px rgba(237, 23, 79, 0.25);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-5px);
+
+  background: #0095c8;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 70px 5%;
+  }
+
+  .hero-content {
+    padding: 40px;
+  }
+
+  .hero h1,
+  .hero h1 small {
+    font-size: 42px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-content {
+    padding: 30px 20px;
+  }
+
+  .hero h1,
+  .hero h1 small {
+    font-size: 34px;
+  }
+}
+
+/* =================  SECTION ================= */
+/* Brand Palette - Pink Theme */
+
+.heart-section {
+  padding: 50px 8%;
+
+  background: linear-gradient(180deg, #fff5f8, #ffffff);
+}
+
+.heart-container {
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/* TOP */
+
+.heart-top {
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.heart-top span {
+  color: #e51652;
+
+  font-weight: 700;
+
+  font-size: 18px;
+}
+
+.heart-top h2 {
+  font-size: 45px;
+
+  color: #7b1b8e;
+
+  margin: 18px 0;
+}
+
+.heart-top p {
+  font-size: 17px;
+
+  color: #777777;
+
+  line-height: 1.8;
+}
+
+.warning-left h2 {
+  color: white;
+
+  font-size: 38px;
+}
+
+.warning-left p {
+  color: #ffeaf1;
+
+  line-height: 1.8;
+
+  max-width: 650px;
+
+  margin: 20px 0;
+}
+
+.heart-main-btn {
+  display: inline-block;
+
+  background: white;
+
+  color: #1175ae !important;
+
+  padding: 12px 16px;
+
+  border-radius: 50px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.heart-main-btn:hover {
+  /* background: #7b1b8e; */
+
+  color: white;
+}
+
+/* HEART ICON */
+
+.pulse-circle {
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 70px;
+
+  color: #e51652;
+
+  animation: pulse 2s infinite;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+/* CARDS */
+
+.symptom-grid {
+  margin-top: 70px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.symptom-icon {
+  width: 65px;
+
+  height: 65px;
+
+  background: #fde8ef;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 32px;
+
+  margin-bottom: 25px;
+}
+
+.symptom-card h3 {
+  font-size: 22px;
+
+  margin-bottom: 15px;
+}
+
+.symptom-card p {
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #777777;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .symptom-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .warning-box {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heart-section {
+    padding: 60px 5%;
+  }
+
+  .heart-top h2 {
+    font-size: 32px;
+  }
+
+  .warning-left h2 {
+    font-size: 28px;
+  }
+
+  .symptom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=========================================
+Emergency Section
+=========================================*/
+
+.emergency-wrapper {
+  /* border-radius:22px; */
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/*=========================================
+Left Side
+=========================================*/
+
+.emergency-left {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+}
+
+.emergency-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.emergency-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 95px;
+  display: flex;
+  align-items: center;
+}
+.location-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.emergency-content {
+  /* max-width:600px; */
+  color: #fff;
+}
+
+.step-number {
+  background: #fff;
+  color: #e31c48;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.emergency-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.emergency-content ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.emergency-content ul li {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.help-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 15px 32px;
+  background: #fff;
+  color: #d91f3a;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.help-btn:hover {
+  background: #d91f3a;
+  color: #fff;
+}
+
+/*=========================================
+Right Side
+=========================================*/
+
+.emergency-right {
+  position: relative;
+  background: #fff;
+  height: 100%;
+  min-height: 400px;
+  padding: 60px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.emergency-right {
+  width: 100%;
+}
+
+.heart-outline {
+  position: absolute;
+  right: -40px;
+  top: 40px;
+  width: 260px;
+  height: 220px;
+  opacity: 0.15;
+  background: url("/kims-site/wp-content/themes/assets/heart-outline.png") no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 260px;
+  height: 58px;
+  background: linear-gradient(90deg, #d61d45, #ee3558);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.35s;
+}
+
+.call-btn:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(214, 29, 69, 0.35);
+}
+
+/*=========================================
+Responsive
+=========================================*/
+@media (max-width: 991px) {
+  .emergency-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .emergency-left {
+    min-height: 520px;
+    position: relative;
+  }
+
+  .emergency-bg {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .emergency-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .emergency-content {
+    width: 100%;
+    color: #fff;
+    text-align: left;
+  }
+
+  .location-title {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 991px) {
+  .emergency-right {
+    width: 100%;
+    padding: 35px 20px;
+    text-align: center;
+  }
+
+  .emergency-right p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .emergency-right .btn {
+    width: 100%;
+  }
+}
+/* ================= SERVICES SECTION ================= */
+
+.services-section {
+  padding: 70px 6%;
+
+  background: linear-gradient(135deg, #f7fcff, #ffffff);
+}
+
+.services-wrapper {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 35% 65%;
+
+  gap: 40px;
+
+  align-items: start;
+}
+
+/* ================= LEFT PREMIUM ================= */
+
+.services-info {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 28px;
+
+  height: max-content;
+
+  position: sticky;
+
+  top: 90px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #e8f6fa;
+}
+
+.care-badge {
+  display: inline-block;
+
+  background: #e8f7fa;
+
+  color: #0093bd;
+
+  padding: 10px 22px;
+
+  border-radius: 40px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.services-info h2 {
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  margin: 25px 0;
+
+  color: #0093bd;
+}
+
+.services-info p {
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  /* color: #777; */
+}
+
+/* STATS */
+
+.care-stats {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin: 25px 0;
+}
+
+.care-stats div {
+  background: #e7f3f9;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.care-stats h3 {
+  font-size: 28px;
+
+  margin: 0;
+
+  color: #e31c48;
+}
+
+.care-stats span {
+  font-size: 13px;
+
+  font-weight: 700;
+
+  /* color: #777; */
+}
+
+/* CTA */
+
+.quick-help {
+  margin-top: 25px;
+
+  background: linear-gradient(135deg, #047eb9);
+
+  padding: 25px;
+
+  border-radius: 25px;
+}
+
+.help-icon {
+  width: 45px;
+
+  height: 45px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #e51652;
+}
+
+.quick-help h3 {
+  font-size: 22px;
+
+  color: white;
+}
+
+.quick-help p {
+  color: white;
+
+  font-size: 14px;
+}
+
+.quick-help a {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  background: white;
+
+  color: #0093bd;
+
+  padding: 12px 25px;
+
+  border-radius: 30px;
+
+  font-weight: 700;
+
+  /* it carries an href now, so suppress the default underline */
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.quick-help a:hover {
+  background: #e31c48;
+
+  color: #fff;
+}
+
+/* ================= RIGHT TIMELINE ================= */
+
+.services-list {
+  padding-left: 25px;
+
+  border-left: 3px solid #dff5f3;
+}
+
+.service-row {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  gap: 20px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s;
+}
+
+.service-row:hover {
+  transform: translateY(-5px);
+}
+
+.number {
+  min-width: 55px;
+
+  height: 55px;
+
+  background: #fde8e8;
+
+  color: #dc3545;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+.service-row h3 {
+  font-size: 24px;
+
+  font-weight: 600;
+
+  line-height: 31px;
+
+  color: #1175ae;
+
+  margin-bottom: 8px;
+
+  transition: 0.3s;
+}
+
+.service-row p {
+  font-size: 15px;
+
+  color: #777;
+
+  line-height: 1.6;
+}
+
+.service-row ul {
+  margin-top: 12px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.service-row li {
+  background: #e7f3f9;
+
+  padding: 8px 12px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+.service-row li::before {
+  content: "✓ ";
+
+  color: #1175ae;
+
+  font-weight: bold;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .services-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .services-info {
+    position: relative;
+
+    top: 0;
+  }
+
+  .services-list {
+    padding-left: 0;
+
+    border-left: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 45px 5%;
+  }
+
+  .services-info h2 {
+    font-size: 28px;
+  }
+
+  .service-row {
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .service-row ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Us */
+.about-us {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.about-content {
+  padding-right: 70px;
+}
+
+.about-content span {
+  color: #1175ae;
+  font-weight: 600;
+  font-size: 15px;
+}
+.about-subheading {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image {
+  margin-left: 70px;
+  width: 90%;
+  border-radius: 20px;
+  display: block;
+}
+
+/* The three cards float over the hospital photo. Their vertical
+   offsets are percentages of the wrapper, not fixed pixels, so they
+   keep their spacing as the image scales and never collide. */
+
+.emergency-card {
+  background-color: #e31c48;
+  position: absolute;
+  left: 0;
+  top: 2%;
+  width: min(250px, 58%);
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.ambulance-card {
+  position: absolute;
+  left: 0;
+  top: 37%;
+  width: min(230px, 54%);
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.location-card {
+  position: absolute;
+  left: 0;
+  top: 72%;
+  width: min(270px, 62%);
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.main-heading {
+  color: rgb(17, 117, 174);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.btn-danger {
+  background: #e31c48;
+  border: none;
+  padding: 16px 34px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.btn-outline-danger {
+  border: 2px solid #e31c48;
+  color: #e31c48;
+  padding: 16px 34px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.btn-outline-danger:hover {
+  background: #e31c48;
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .about-us {
+    padding: 0 0px 0 0px;
+  }
+  /* Left Content */
+  .about-content {
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .about-content .main-heading,
+  .about-content p,
+  .about-content .about-subheading {
+    text-align: center;
+  }
+
+  /* Center Buttons */
+  .about-content .d-flex {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Right Side */
+  .about-image-wrapper {
+    /* padding-left: 53px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .emergency-card,
+  .ambulance-card,
+  .location-card {
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100%;
+    max-width: 380px;
+    margin: 16px auto !important;
+  }
+
+  .emergency-card {
+    margin-top: 16px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-content {
+    /* padding-right: 20px !important; */
+    text-align: center;
+  }
+
+  .about-content .d-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px !important;
+  }
+
+  .about-content .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .emergency-card,
+  .ambulance-card,
+  .location-card {
+    max-width: 100%;
+    margin: 12px auto !important;
+  }
+
+  .about-image {
+    margin: 16px auto;
+  }
+}
+
+/*========================================
+SYMPTOMS CARDS
+========================================*/
+
+.symptoms-wrapper {
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+/*========================================
+SWIPER
+========================================*/
+
+.symptomSwiper {
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.symptomSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.symptomSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/*========================================
+CARD
+========================================*/
+
+.symptom-card {
+  width: 100%;
+  min-height: 370px;
+
+  background: #fff;
+
+  border: 1px solid #d8eaf4;
+
+  border-radius: 22px;
+
+  padding: 20px 12px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.35s;
+
+  box-shadow: 0 12px 35px rgba(17, 117, 174, 0.08);
+}
+
+.symptom-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: #1175ae;
+
+  transform: scaleX(0);
+
+  transition: 0.35s;
+}
+
+.symptom-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #1175ae;
+
+  box-shadow: 0 22px 50px rgba(17, 117, 174, 0.18);
+}
+
+.symptom-card:hover::before {
+  transform: scaleX(1);
+}
+
+/*========================================
+ICON
+========================================*/
+
+.card-icon {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #e7f3f9;
+
+  font-size: 34px;
+
+  transition: 0.35s;
+}
+
+.card-icon i {
+  color: #1175ae;
+}
+
+.symptom-card:hover .card-icon {
+  /* background: #1175ae; */
+
+  color: #fff;
+
+  transform: scale(1.1) rotate(-8deg);
+}
+
+
+.card-icon {
+    background-color: #fde8e8;
+    color: #dc3545;
+}
+
+.card-icon i {
+    color: #dc3545;
+}
+
+/*========================================
+SUBTITLE
+========================================*/
+
+.card-subtitle {
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  background: #e7f3f9;
+
+  color: #1175ae;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+
+  border-radius: 50px;
+
+  margin-bottom: 18px;
+}
+
+/*========================================
+HEADING
+========================================*/
+p {
+  color: #0f1115 !important;
+}
+
+.card-content h3 {
+  font-size: 20px;
+
+  /* font-weight: 500; */
+
+  line-height: 31px;
+
+  color: #1175ae;
+
+  margin-bottom: 8px;
+
+  transition: 0.3s;
+}
+
+.symptom-card:hover h4 {
+  color: #1175ae;
+}
+
+/*========================================
+PARAGRAPH
+========================================*/
+
+.card-text {
+  font-size: 14px;
+
+  line-height: 27px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* The collapsed blurb is clamped to exactly 2 lines rather than
+   relying on where the copy was manually split in the markup —
+   that split point differed per card, so some showed 3 lines.
+   The hidden remainder stays in flow and the clamp does the
+   truncating, which keeps every card the same height. */
+
+.more-text {
+  display: inline;
+}
+
+.card-text.active {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+/*========================================
+VIEW MORE BUTTON
+========================================*/
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 10px;
+
+  background: #e31c48;
+  color: #fff;
+
+  border: 2px solid #e31c48;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+
+  box-shadow: 0 8px 20px rgba(227, 28, 72, 0.18);
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 7px 15px;
+}
+
+.view-more-btn:hover {
+  background: #fff;
+  color: #e31c48;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(227, 28, 72, 0.25);
+}
+
+.view-more-btn:hover::after {
+  transform: translateX(4px);
+}
+
+.view-more-btn:active {
+  transform: scale(0.96);
+}
+
+.view-more-btn:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 4px rgba(227, 28, 72, 0.15);
+}
+
+/*========================================
+RESPONSIVE
+========================================*/
+
+@media (max-width: 991px) {
+  .symptom-card {
+    width: 100%;
+
+    min-height: 350px;
+
+    padding: 25px 20px;
+  }
+
+  .card-content h4 {
+    font-size: 19px;
+
+    line-height: 28px;
+  }
+
+  .card-text {
+    font-size: 14px;
+
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .symptoms-scroll {
+    gap: 18px;
+  }
+
+  .symptom-card {
+    width: 100%;
+
+    min-height: 320px;
+
+    padding: 22px 18px;
+  }
+
+  .card-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 28px;
+  }
+
+  .card-subtitle {
+    font-size: 11px;
+
+    padding: 6px 14px;
+  }
+
+  .card-content h4 {
+    font-size: 17px;
+
+    line-height: 26px;
+  }
+
+  .card-text {
+    font-size: 13px;
+
+    line-height: 23px;
+  }
+}
+/*====================================================
+Advanced Procedure Circle UI
+====================================================*/
+
+.procedure-section {
+  padding: 100px 0;
+  background: #e7f3f9;
+  overflow: hidden;
+}
+
+.procedure-circle {
+  width: 1050px;
+  height: 980px;
+  margin: auto;
+  position: relative;
+}
+
+/*============================
+Center Heart
+============================*/
+
+.center-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.heart-circle {
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 0 0 18px rgba(17, 117, 174, 0.08),
+    0 20px 60px rgba(17, 117, 174, 0.25);
+
+  position: relative;
+}
+
+.heart-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  border: 2px dashed rgba(17, 117, 174, 0.18);
+
+  animation: rotateHeart 40s linear infinite;
+}
+
+@keyframes rotateHeart {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heart-circle img {
+  width: 160px;
+  animation: heartBeat 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.15);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.18);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.heart-circle:hover img {
+  transform: scale(1.08);
+}
+
+/*============================
+Cards
+============================*/
+
+.procedure-box {
+  position: absolute;
+
+  width: 260px;
+
+  background: #f8fbff;
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 22px;
+
+  padding: 18px 12px;
+
+  text-align: center;
+
+  border: 1px solid rgba(17, 117, 174, 0.12);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  z-index: 5;
+}
+
+.procedure-box:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 25px 55px rgba(17, 117, 174, 0.18);
+
+  border-color: #1175ae;
+}
+
+.icon-box {
+  width: 55px;
+  height: 55px;
+
+  margin: auto auto 20px;
+
+  border-radius: 50%;
+
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box i {
+  color: #fff;
+
+  font-size: 30px;
+}
+.icon-box {
+  width: 55px;
+  height: 55px;
+
+  margin: auto auto 20px;
+
+  border-radius: 50%;
+
+  background-color: #fde8e8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box i {
+  color: #dc3545;
+  font-size: 30px;
+}
+
+.procedure-box h5 {
+  color: #0b2a45;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+.procedure-box p {
+  color: #0f1115 !important;
+
+  line-height: 1.8;
+
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/*============================
+Connecting Lines
+============================*/
+
+.procedure-box::after {
+  content: "";
+
+  position: absolute;
+
+  background: #1175ae;
+
+  opacity: 0.18;
+}
+
+/*============================
+Positions - six cards in a hexagon
+around the heart at (525, 450)
+============================*/
+
+/* 280px keeps the outer columns clear of the heart's halo,
+   which spans x 375-675 on this 1050px canvas. */
+.top-left-box    { left: 70px;  top: 20px; }
+.top-right-box   { right: 70px; top: 20px; }
+.left-box        { left: 20px;  top: 348px; }
+.right-box       { right: 20px; top: 348px; }
+.bottom-left-box { left: 70px;  bottom: 20px; }
+.bottom-right-box{ right: 70px; bottom: 20px; }
+
+/*============================
+Connecting Lines
+Each runs from the card edge nearest the heart to
+~4px off the halo, matching the original spacing.
+============================*/
+
+.left-box::after,
+.right-box::after {
+  width: 90px;
+  height: 2px;
+  top: 50%;
+}
+
+.left-box::after  { right: -90px; }
+.right-box::after { left: -90px; }
+
+.top-left-box::after,
+.bottom-left-box::after {
+  width: 150px;
+  height: 2px;
+  right: -150px;
+}
+
+.top-right-box::after,
+.bottom-right-box::after {
+  width: 150px;
+  height: 2px;
+  left: -150px;
+}
+
+.top-left-box::after {
+  bottom: 42px;
+  transform-origin: left center;
+  transform: rotate(38deg);
+}
+
+.top-right-box::after {
+  bottom: 42px;
+  transform-origin: right center;
+  transform: rotate(-38deg);
+}
+
+.bottom-left-box::after {
+  top: 42px;
+  transform-origin: left center;
+  transform: rotate(-38deg);
+}
+
+.bottom-right-box::after {
+  top: 42px;
+  transform-origin: right center;
+  transform: rotate(38deg);
+}
+
+/*============================
+Responsive
+============================*/
+
+@media (max-width: 991px) {
+  .procedure-circle {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .center-heart,
+  .procedure-box {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    transform: none;
+  }
+
+  .procedure-box::after {
+    display: none;
+  }
+
+  .center-heart {
+    margin: 50px auto;
+  }
+
+  .procedure-box {
+    width: 100%;
+  }
+
+  .heart-circle {
+    width: 240px;
+    height: 240px;
+  }
+
+  .heart-circle img {
+    width: 145px;
+  }
+}
+
+/*=====================================
+  Other Advanced Cardiac Procedures
+======================================*/
+
+.other-card {
+  background: #e7f3f9;
+  border: 2px solid #d1e7dd;
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-top: 30px;
+}
+
+.other-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1175ae;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.other-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.other-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  /* font-weight: 400; */
+  color: #0f1115;
+  line-height: 1.7;
+}
+
+.other-list li:last-child {
+  margin-bottom: 0;
+}
+
+.other-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  background: #e31c48;
+  border-radius: 50%;
+}
+
+/* Column spacing */
+
+.other-card .row {
+  --bs-gutter-x: 2.5rem;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .other-card {
+    padding: 20px;
+  }
+
+  .other-title {
+    font-size: 20px;
+  }
+
+  .other-list {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .other-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .other-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .other-list li {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+/*=========================================
+    PREMIUM HOSPITAL CARD
+=========================================*/
+
+.tech-card {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 100%;
+  border: none;
+  transition: 0.45s ease;
+  box-shadow: 0 15px 45px rgba(18, 51, 109, 0.08);
+}
+
+.tech-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 30px 60px rgba(18, 51, 109, 0.15);
+}
+
+/* Image */
+
+.tech-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: 0.6s;
+}
+
+.tech-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Floating Content */
+
+.tech-content {
+  width: 88%;
+  margin: -45px auto 20px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  position: relative;
+
+  z-index: 5;
+
+  box-shadow: 0 10px 30px rgba(18, 51, 109, 0.08);
+}
+
+/* Number Badge */
+
+/* .tech-content::before{
+
+    content:"01";
+
+    position:absolute;
+
+    top:-18px;
+    right:20px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#E31C48;
+
+    color:#fff;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:15px;
+
+} */
+
+/* Heading */
+
+.tech-content h4 {
+  font-size: 22px;
+
+  color: #1175ae;
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+}
+
+/* Description */
+
+.tech-content p {
+  font-size: 15px;
+
+  color: #687182;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+/*=========================================================
+    CAROUSEL CONTROLS
+=========================================================*/
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px;
+  height: 30px;
+  top: 45%;
+  opacity: 1;
+
+  background: #fff;
+
+  border-radius: 50%;
+
+  border: 1px solid #e4ebf5;
+
+  box-shadow: 0 8px 20px rgba(18, 51, 109, 0.08);
+
+  transition: 0.35s ease;
+}
+
+.carousel-control-prev {
+  left: -26px;
+}
+
+.carousel-control-next {
+  right: -26px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #1175ae;
+  border-color: #1175ae;
+
+  transform: translateY(-2px);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 18px;
+  height: 18px;
+
+  filter: invert(20%) sepia(18%) saturate(1800%) hue-rotate(190deg);
+
+  transition: 0.3s;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+}
+
+/*=========================================================
+    INDICATORS
+=========================================================*/
+
+.carousel-indicators {
+  bottom: -55px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #c8d2e2;
+
+  border: none;
+
+  margin: 0 6px;
+
+  transition: 0.35s;
+}
+
+.carousel-indicators .active {
+  width: 30px;
+
+  border-radius: 50px;
+
+  background: #e31c48;
+}
+
+/*=========================================================
+    CARD HOVER EFFECT
+=========================================================*/
+
+.tech-card {
+  position: relative;
+}
+
+.tech-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(18, 51, 109, 0.04) 100%
+  );
+
+  opacity: 0;
+
+  transition: 0.35s;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
+}
+
+/*=========================================================
+    IMAGE EFFECT
+=========================================================*/
+
+.tech-card img {
+  transition: 0.5s ease;
+}
+
+.tech-card:hover img {
+  transform: scale(1.05);
+}
+
+/*=========================================================
+    TITLE EFFECT
+=========================================================*/
+
+.tech-content h5 {
+  transition: 0.3s;
+}
+
+.tech-card:hover h5 {
+  color: #e31c48;
+}
+
+/*=========================================================
+    CARD BORDER EFFECT
+=========================================================*/
+
+.tech-card:hover {
+  border-color: #d5e5f8;
+}
+
+/*=========================================================
+    BUTTON EFFECT
+=========================================================*/
+
+.technology-btn {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.technology-btn::before {
+  content: "";
+
+  position: absolute;
+
+  left: -100%;
+
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  transform: skewX(-30deg);
+
+  transition: 0.6s;
+}
+
+.technology-btn:hover::before {
+  left: 120%;
+}
+
+/*=========================================================
+    CARD SPACING
+=========================================================*/
+
+.carousel-item .row {
+  margin: 0 -10px;
+}
+
+.carousel-item .col-lg-4 {
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .carousel-control-prev {
+    left: 0px;
+  }
+
+  .carousel-control-next {
+    right: 0px;
+  }
+  .technology-content {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .tech-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .tech-content {
+    width: 92%;
+    padding: 18px;
+  }
+
+  .tech-content h4 {
+    font-size: 20px;
+  }
+
+  .tech-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+/*=========================================
+    TESTIMONIAL SECTION
+=========================================*/
+
+.testimonial-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.testimonial-section .container {
+  max-width: 1320px;
+}
+
+/*=========================================
+    INTRO CARD
+=========================================*/
+
+.testimonial-intro {
+  height: 100%;
+
+  background: #f7f9fc;
+
+  border: 1px solid #eef2f7;
+
+  border-radius: 18px;
+
+  padding: 35px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.testimonial-intro h2 {
+  font-size: 34px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: #122b5a;
+
+  margin-bottom: 18px;
+}
+
+.testimonial-intro p {
+  font-size: 15px;
+
+  color: #6b7280;
+
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+.view-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #e31c48;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  color: #122b5a;
+}
+/*=========================
+SECTION
+=========================*/
+
+.testimonial-section {
+  padding: 70px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.testimonialSwiper {
+  overflow: hidden;
+}
+
+/*=========================
+LEFT CARD
+=========================*/
+
+.testimonial-intro {
+  background: #f7f9fc;
+  border-radius: 18px;
+  padding: 30px;
+  height: 100%;
+}
+
+.testimonial-intro h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+}
+
+.testimonial-intro p {
+  margin: 18px 0;
+  color: #666;
+  line-height: 1.8;
+}
+
+.view-btn {
+  color: #e31c48;
+  text-decoration: none;
+  font-weight: 700;
+}
+/*=========================
+TESTIMONIAL CARD
+=========================*/
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  padding: 18px;
+  height: 100%;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #d8e5f2;
+}
+
+/*=========================
+QUOTE
+=========================*/
+
+.quote-icon {
+  font-size: 26px;
+  color: #e31c48;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+/*=========================
+REVIEW
+=========================*/
+
+.review {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 16px;
+  /* full quote, no clamp - even card heights come from the
+     grid stretching, not from truncating the text */
+}
+
+/*=========================
+PATIENT
+=========================*/
+
+.patient {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f2f4f7;
+}
+
+.patient img {
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.patient h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.patient span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: #7a869a;
+}
+
+/*=========================
+SWIPER
+=========================*/
+
+.testimonialSwiper .swiper-slide {
+  height: auto;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+/*======================================
+KIMS FAQ SECTION
+======================================*/
+
+.kims-faq-section {
+  padding: 50px 0;
+  background: #e7f3f9;
+}
+
+.kims-faq-section .main-heading {
+  margin-bottom: 40px;
+}
+
+.kims-faq-accordion {
+  max-width: 900px;
+  margin: auto;
+}
+
+/*======================================
+Accordion Item
+======================================*/
+
+.kims-faq-accordion .accordion-item {
+  border: 1px solid #e7f3f9;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: none;
+}
+.accordion-item {
+}
+
+.accordion-header {
+  /* margin-bottom: 10px; */
+  margin-top: -40px;
+}
+
+/*======================================
+Accordion Button
+======================================*/
+
+.kims-faq-accordion .accordion-button {
+  background: #fff !important;
+  color: #1a1a1a !important;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 18px 22px !important;
+  min-height: auto !important;
+  line-height: 1.5;
+  border: none;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+}
+
+.kims-faq-accordion .accordion-button span {
+  flex: 1;
+}
+
+/*======================================
+Active
+======================================*/
+
+.kims-faq-accordion .accordion-button:not(.collapsed) {
+  background: #1175ae !important;
+  color: #e7f3f9 !important;
+}
+
+/*======================================
+Remove Bootstrap Icon
+======================================*/
+
+.kims-faq-accordion .accordion-button::after {
+  display: none;
+  background: #e7f3f9 !important;
+  color: #1175ae !important;
+}
+
+/*======================================
+Custom Icon
+======================================*/
+
+.kims-faq-accordion .accordion-button::before {
+  content: "+";
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  background: #1175ae;
+  color: #e7f3f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 16px;
+  transition: 0.3s;
+}
+
+.kims-faq-accordion .accordion-button:not(.collapsed)::before {
+  content: "−";
+  background: #e7f3f9;
+  color: #1175ae;
+}
+
+/*======================================
+Accordion Body
+======================================*/
+
+.kims-faq-accordion .accordion-body {
+  background: #fff;
+  /* color:#555; */
+  padding: 18px 22px 22px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/*======================================
+Focus
+======================================*/
+
+.kims-faq-accordion .accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/*======================================
+Mobile
+======================================*/
+
+@media (max-width: 768px) {
+  .kims-faq-section {
+    padding: 50px 0;
+  }
+
+  .kims-faq-accordion .accordion-button {
+    font-size: 16px;
+    padding: 15px 18px !important;
+  }
+
+  .kims-faq-accordion .accordion-body {
+    padding: 15px 18px 18px;
+    font-size: 14px;
+  }
+
+  .kims-faq-accordion .accordion-button::before {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    font-size: 16px;
+    margin-right: 12px;
+  }
+}
+/*======================================
+Event
+======================================*/
+
+.gallery-event {
+  margin-top: 30px;
+}
+
+.gallery-heading {
+  font-size: 24px;
+  font-weight: 700;
+  /* color:#17304F; */
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.gallery-description {
+  font-size: 16px;
+  color: #667085;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/*======================================
+Featured Image
+======================================*/
+
+.gallery-featured-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.gallery-featured-img:hover {
+  transform: scale(1.02);
+}
+
+/*======================================
+Gallery Images
+======================================*/
+
+.gallery-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.gallery-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(17, 117, 174, 0.12);
+}
+.kims-gallery-section {
+  padding: 50px 0;
+}
+
+/*======================================
+Responsive
+======================================*/
+
+@media (max-width: 991px) {
+  .kims-gallery-section {
+    padding: 70px 0;
+  }
+
+  .kims-gallery-title {
+    font-size: 34px;
+  }
+
+  .gallery-heading {
+    font-size: 24px;
+  }
+
+  .gallery-featured-img {
+    height: 260px;
+  }
+
+  .gallery-img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 767px) {
+  .kims-gallery-section {
+    padding: 60px 0;
+  }
+
+  .kims-gallery-title {
+    font-size: 28px;
+  }
+
+  .kims-gallery-text {
+    font-size: 16px;
+  }
+
+  .gallery-heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .gallery-description {
+    text-align: center;
+  }
+
+  .gallery-featured-img {
+    height: 220px;
+  }
+
+  .gallery-img {
+    height: 160px;
+  }
+}
+
+/*=====================================================
+KIMS CTA SECTION
+=====================================================*/
+
+.kims-cta-section {
+  padding: 10px 0;
+  /* background:#f5f9fc; */
+  overflow: hidden;
+}
+
+/*=====================================================
+Wrapper
+=====================================================*/
+
+.kims-cta-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 30px;
+  min-height: 350px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.92) 42%,
+      rgba(255, 255, 255, 0.35) 60%,
+      rgba(255, 255, 255, 0) 75%
+    ),
+    url("/kims-site/wp-content/themes/hospital-theme/assets/hear-care.png");
+
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    left top,
+    right center;
+
+  /* Change these */
+  background-size: 100%, cover;
+}
+
+.kims-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.kims-cta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #eef7fc;
+  color: #1175ae;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.kims-cta-tag i {
+  color: #1175ae;
+}
+
+/*=====================================================
+Heading
+=====================================================*/
+
+.main-heading span {
+  color: #1175ae;
+  display: block;
+}
+
+/*=====================================================
+Divider
+=====================================================*/
+
+.kims-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.kims-divider span {
+  width: 80px;
+  height: 2px;
+  background: #1175ae;
+}
+
+.kims-divider i {
+  color: #1175ae;
+  font-size: 20px;
+}
+
+/*=====================================================
+Paragraph
+=====================================================*/
+
+.kims-cta-text {
+  font-size: 19px;
+  line-height: 1.9;
+  color: #5f6673;
+  max-width: 560px;
+  margin-bottom: 40px;
+}
+
+/*=====================================================
+CTA Button
+=====================================================*/
+
+.kims-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #e31c48;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  width: fit-content;
+  transition: 0.35s;
+  box-shadow: 0 18px 35px #e7f3f9;
+  font-size: 20px;
+  border-radius: 18px;
+  font-weight: 500;
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-icon i {
+  font-size: 19px;
+}
+
+.btn-text {
+  flex: 1;
+}
+
+.btn-text small {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.btn-text strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-arrow {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.35s;
+}
+
+.kims-cta-btn:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/*=====================================================
+SPECIALIST CARDS
+=====================================================*/
+
+.kims-specialist-card {
+  position: relative;
+  background: #fff;
+  border-radius: 22px;
+  padding: 35px 30px;
+  height: 100%;
+  border: 1px solid #edf3f7;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+.kims-specialist-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(17, 117, 174, 0.15);
+}
+
+.kims-specialist-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #1175ae;
+}
+
+/*=====================================================
+TOP
+=====================================================*/
+
+.kims-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+/*=====================================================
+ICON
+=====================================================*/
+
+.kims-card-icon {
+  width: 75px;
+
+  height: 75px;
+
+  border-radius: 20px;
+
+  background: #e7f3f9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.kims-card-icon i {
+  font-size: 34px;
+
+  color: #1175ae;
+}
+
+/*=====================================================
+TITLE
+=====================================================*/
+
+.kims-card-top h4 {
+  font-size: 24px;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: #1d3557;
+
+  margin-bottom: 12px;
+}
+
+.kims-card-top h4 span {
+  display: block;
+
+  color: #1175ae;
+}
+
+/*=====================================================
+LINE
+=====================================================*/
+
+.kims-small-line {
+  width: 70px;
+
+  height: 3px;
+
+  border-radius: 50px;
+
+  background: #1175ae;
+}
+
+/*=====================================================
+LIST
+=====================================================*/
+
+.kims-specialist-list {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.kims-specialist-list li {
+  position: relative;
+
+  padding-left: 28px;
+
+  margin-bottom: 15px;
+
+  color: #5d6878;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.kims-specialist-list li:last-child {
+  margin-bottom: 0;
+}
+
+.kims-specialist-list li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 1px;
+
+  width: 18px;
+
+  height: 18px;
+
+  border-radius: 50%;
+
+  color: #1175ae;
+
+  font-weight: 700;
+}
+
+/*=====================================================
+WIDE CARD
+=====================================================*/
+
+.kims-specialist-wide {
+  padding: 45px;
+}
+
+/*==================================================
+KIMS HEART SPECIALISTS SECTION
+==================================================*/
+
+.kims-specialists-section {
+  position: relative;
+  padding: 50px 0;
+  background: #ffffff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Left Background Circle */
+
+.kims-specialists-section::before {
+  content: "";
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  top: -260px;
+  left: -320px;
+  border-radius: 50%;
+  background: #eaf6fb;
+  z-index: -2;
+}
+
+/* Right Background Circle */
+
+.kims-specialists-section::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  right: -280px;
+  bottom: -250px;
+  border-radius: 50%;
+  background: #eaf6fb;
+  z-index: -2;
+}
+
+/* Container */
+
+.kims-specialists-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/*==================================================
+Heading
+==================================================*/
+
+.kims-specialists-heading {
+  font-size: 52px;
+  font-weight: 800;
+  color: #0f2b5b;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.kims-specialists-heading span {
+  display: block;
+  color: #1175ae;
+}
+
+.kims-specialists-text {
+  max-width: 900px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.8;
+  /* color: #6B7280; */
+}
+
+/*==================================================
+Section Title
+==================================================*/
+
+.kims-specialists-title {
+  font-size: 34px;
+  font-weight: 700;
+  /* color: #0F2B5B; */
+  margin-top: 40px;
+  /* margin-bottom: 20px; */
+}
+
+.kims-specialists-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 50px;
+}
+
+.kims-specialists-divider span {
+  width: 90px;
+  height: 2px;
+  background: #e7f3f9;
+}
+
+.divider-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1175ae;
+  font-size: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+/*==================================================
+SPECIALIST CARD
+==================================================*/
+
+.kims-specialist-card {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-bottom: 3px solid #1175ae;
+  border-radius: 16px;
+  padding: 28px;
+  height: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.kims-specialist-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #dce6ee;
+}
+
+/*==========================
+Header
+==========================*/
+
+.card-header-area {
+  display: flex;
+  align-items: flex-start;
+  /* gap:18px; */
+  /* margin-bottom:22px; */
+}
+
+.card-header-area h4 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #1175ae;
+}
+
+.card-header-area h4 span {
+  display: block;
+  color: #1175ae;
+  font-weight: 700;
+}
+
+/*==========================
+Underline
+==========================*/
+
+.card-line {
+  width: 48px;
+  height: 2px;
+  background: #1175ae;
+  margin-top: 12px;
+}
+
+/*==========================
+List
+==========================*/
+
+.kims-specialist-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kims-specialist-card ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 14px;
+  color: #4f5f73;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.kims-specialist-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+.kims-specialist-card ul li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #1175ae;
+  font-size: 10px;
+}
+
+/* Equal Height */
+
+.row > .col {
+  display: flex;
+}
+
+.row > .col > .kims-specialist-card {
+  width: 100%;
+}
+
+/*=====================================================
+KIMS DOCTORS SECTION
+======================================================*/
+
+.kims-doctors-section {
+  padding: 60px 0;
+  background: #e7f3f9;
+  position: relative;
+  overflow: hidden;
+}
+
+/*======================================
+Heading
+======================================*/
+
+.doctor-subtitle {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #047eb9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.doctor-title {
+  font-size: 46px;
+  font-weight: 700;
+  color: #0f2b5b;
+  margin-bottom: 18px;
+}
+
+.doctor-description {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 30px;
+  color: #6b7280;
+}
+
+/*======================================
+Doctor Card
+======================================*/
+
+.doctor-card {
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e7f3f9;
+  display: flex;
+  flex-direction: column;
+  transition: 0.35s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(4, 126, 185, 0.15);
+}
+
+/*======================================
+Doctor Image
+======================================*/
+
+.doctor-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  transition: 0.4s;
+}
+
+.doctor-card:hover .doctor-image img {
+  transform: scale(1.05);
+}
+
+/*======================================
+Doctor Content
+======================================*/
+
+.doctor-content {
+  padding: 15px 16px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.doctor-name {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+.doctor-specialty {
+  color: #6c757d;
+  font-size: 19px;
+  font-weight: 500;
+  min-height: 60px;
+  /* margin-bottom: 15px; */
+}
+
+.speciality {
+  font-size: 16px;
+  color: #047eb9;
+  font-weight: 600;
+  margin-bottom: 12px;
+  min-height: 48px;
+}
+
+.doctor-content span {
+  display: block;
+  font-size: 17px;
+  color: #6b7280;
+  /* margin-bottom:22px; */
+}
+
+.doctor-content .view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e31c48;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 9px 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto;
+  min-width: auto;
+  margin: 20px auto 0;
+}
+
+.doctor-content .view-more-btn:hover {
+  background: #c4173c;
+  color: #fff;
+}
+
+/*======================================
+Button
+======================================*/
+
+.doctor-btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  background: #047eb9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.doctor-btn:hover {
+  background: #03699a;
+  color: #fff;
+}
+/*======================================
+Doctors Responsive
+======================================*/
+
+@media (max-width: 991px) {
+  .doctorSwiper {
+    padding: 25px 0px 0;
+    position: relative;
+  }
+
+  .doctor-card {
+    height: 100%;
+  }
+
+  .doctor-image img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .doctor-content {
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .doctor-name {
+    font-size: 22px;
+  }
+
+  .doctor-specialty {
+    min-height: 60px;
+  }
+
+  .doctor-content span {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .view-more-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .kims-doctors-section {
+    padding: 60px 0;
+  }
+
+  .doctor-image img {
+    height: 250px;
+  }
+
+  .doctor-content {
+    padding: 20px 18px;
+    text-align: center;
+  }
+
+  .doctor-name {
+    font-size: 20px;
+  }
+
+  .doctor-specialty {
+    font-size: 15px;
+    line-height: 24px;
+    min-height: 55px;
+  }
+
+  .doctor-content span {
+    font-size: 14px;
+    margin: 12px 0;
+  }
+
+  .view-more-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+/*======================================
+Footer
+======================================*/
+
+.footer-section {
+  background: #1175ae;
+  padding: 20px 0;
+}
+
+.footer-section p {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 0;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #25b4e8;
+}
+
+.footer-section span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .footer-section .col-md-6 {
+    text-align: center !important;
+  }
+
+  .footer-section p {
+    margin-bottom: 10px;
+  }
+}
+
+/*======================================
+Warning Box
+======================================*/
+
+.warning-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  margin-top: 35px;
+  background: #ffffff;
+  border: 1px solid #e7f3f9;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(17, 117, 174, 0.08);
+  transition: 0.3s ease;
+}
+
+.warning-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(17, 117, 174, 0.12);
+}
+
+.warning-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: #e31c48;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.warning-content {
+  flex: 1;
+}
+
+.warning-content h5 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.warning-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .warning-box {
+    padding: 16px;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .warning-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 20px;
+  }
+
+  .warning-content h5 {
+    font-size: 17px;
+  }
+}
+
+/*======================================
+Doctors Carousel
+======================================*/
+
+.doctorSwiper {
+  /* room for the card hover-lift and the pagination dots */
+  padding: 12px 0 55px;
+}
+
+.doctorSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.doctorSwiper .doctor-card {
+  height: 100%;
+}
+
+.doctorSwiper .doctor-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* pins the button to the bottom so cards line up despite
+   two- vs three-line specialty text */
+.doctorSwiper .doctor-content .view-more-btn {
+  margin-top: auto;
+}
+
+.doctorSwiper .swiper-pagination {
+  bottom: 10px;
+}
+
+.doctorSwiper .swiper-pagination-bullet {
+  background: #047eb9;
+  opacity: 0.35;
+}
+
+.doctorSwiper .swiper-pagination-bullet-active {
+  background: #e31c48;
+  opacity: 1;
+}
+
+.doctorSwiper .swiper-button-next,
+.doctorSwiper .swiper-button-prev {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  color: #e31c48;
+  box-shadow: 0 6px 18px rgba(4, 126, 185, 0.18);
+  transition: 0.3s;
+}
+
+.doctorSwiper .swiper-button-next:after,
+.doctorSwiper .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.doctorSwiper .swiper-button-next:hover,
+.doctorSwiper .swiper-button-prev:hover {
+  background: #e31c48;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .doctorSwiper .swiper-button-next,
+  .doctorSwiper .swiper-button-prev {
+    display: none;
+  }
+}
+
+/*======================================
+Doctor Card — refreshed look
+Overrides the base .doctor-card rules above.
+======================================*/
+
+.doctorSwiper .doctor-card {
+  max-width: 100%;
+  border: 1px solid #dceaf4;
+  border-radius: 24px;
+  box-shadow: 0 4px 18px rgba(15, 43, 91, 0.06);
+  position: relative;
+  isolation: isolate;
+}
+
+/* accent bar that wipes in across the top on hover */
+.doctorSwiper .doctor-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e31c48, #ff6b8a);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.doctorSwiper .doctor-card:hover::before {
+  transform: scaleX(1);
+}
+
+.doctorSwiper .doctor-card:hover {
+  transform: translateY(-10px);
+  border-color: #f5c6d1;
+  box-shadow: 0 22px 45px rgba(227, 28, 72, 0.16);
+}
+
+/*======================================
+Photo area
+======================================*/
+
+.doctorSwiper .doctor-image {
+  height: 245px;
+  padding-top: 14px;
+  position: relative;
+  background: linear-gradient(160deg, #eaf5fb 0%, #f7fbfd 55%, #fff 100%);
+}
+
+/* The disc that used to sit behind the doctor is gone — it read
+   as a hard blue semicircle, and it framed the white-background
+   JPGs badly. The gradient alone carries the photo now. */
+
+.doctorSwiper .doctor-image img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.doctor-dept {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  color: #047eb9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(15, 43, 91, 0.1);
+}
+
+/*======================================
+Card body
+======================================*/
+
+.doctorSwiper .doctor-content {
+  padding: 18px 20px 22px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.doctorSwiper .doctor-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f2b5b;
+  margin-bottom: 6px;
+}
+
+.doctorSwiper .doctor-specialty {
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #6b7280;
+  min-height: 44px;
+  margin-bottom: 14px;
+}
+
+/* experience pill */
+.doctorSwiper .doctor-exp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  align-self: center;
+  background: #eaf5fb;
+  color: #047eb9;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.doctorSwiper .doctor-exp i {
+  font-size: 12px;
+  color: #e31c48;
+}
+
+/*======================================
+Button
+======================================*/
+
+.doctorSwiper .doctor-content .view-more-btn {
+  margin: auto auto 0;
+  padding: 11px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 9px;
+  box-shadow: 0 6px 16px rgba(227, 28, 72, 0.22);
+}
+
+.doctorSwiper .doctor-content .view-more-btn i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.doctorSwiper .doctor-content .view-more-btn:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 575px) {
+  .doctorSwiper .doctor-image {
+    height: 260px;
+  }
+}
+
+/*======================================
+Center Heart — 3D video
+Overrides the white .heart-circle above: the source
+footage is on black, so the circle goes dark to match.
+======================================*/
+
+.heart-circle:has(.heart-video) {
+  background: #fff;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 18px rgba(227, 28, 72, 0.07),
+    0 20px 60px rgba(15, 43, 91, 0.14);
+}
+
+.heart-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  /* the beat lives in the footage, not in CSS */
+  animation: none;
+  /* Shrinks the heart inside the circle. Seamless because the
+     footage's background and the circle are both white — change
+     this one number to resize the heart. */
+  transform: scale(0.62);
+}
+
+.heart-circle:hover .heart-video {
+  transform: scale(0.62);
+}
+
+/* the black backdrop is keyed out of the footage now, so the
+   dark vignette that used to hide the video edge is gone */
+
+/* the rotating dashed ring reads better in the brand red now */
+.heart-circle:has(.heart-video)::before {
+  border-color: rgba(227, 28, 72, 0.22);
+}
+
+
+/* the doctor CTA is an <a> now, so kill the default underline */
+.doctorSwiper .doctor-content .view-more-btn,
+.doctorSwiper .doctor-content .view-more-btn:hover {
+  text-decoration: none;
+}
+
+/* tap-to-call numbers inside the about-section cards.
+   inherit the card's own colour so the red and white
+   cards both keep their existing look. */
+.card-tel {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+  /* padding + matching negative margin grows the touch
+     target to ~44px without shifting the layout */
+  display: inline-block;
+  padding: 12px 8px;
+  margin: -12px -8px;
+}
+
+.card-tel:hover,
+.card-tel:focus {
+  color: inherit;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/*======================================
+Doctors — department filter
+======================================*/
+
+.doctor-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.doctor-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #0f2b5b;
+  border: 1px solid #dceaf4;
+  border-radius: 30px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  /* the global button{} rule adds margin-top:45px, which blew
+     the filter apart once the pills wrapped on mobile */
+  margin: 0;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+/* The global button:hover sets a cyan background and a -5px lift;
+   both are overridden here or the pill turns teal and jumps. */
+.doctor-filter-btn:hover,
+.doctor-filter-btn:focus-visible {
+  background: #e31c48;
+  border-color: #e31c48;
+  color: #fff;
+  transform: none;
+  box-shadow: 0 6px 16px rgba(227, 28, 72, 0.22);
+}
+
+.doctor-filter-btn:hover .doctor-filter-count,
+.doctor-filter-btn:focus-visible .doctor-filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.doctor-filter-btn.is-active {
+  background: #e31c48;
+  border-color: #e31c48;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(227, 28, 72, 0.22);
+}
+
+.doctor-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 20px;
+  background: #eaf5fb;
+  color: #047eb9;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.doctor-filter-btn.is-active .doctor-filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* when a department has too few doctors to rotate, the arrows
+   and dots would be dead controls — hide them */
+.doctorSwiper.is-static .swiper-button-next,
+.doctorSwiper.is-static .swiper-button-prev,
+.doctorSwiper.is-static .swiper-pagination {
+  display: none;
+}
+
+/* On narrow screens the pills become one horizontally scrollable
+   row instead of stacking into four centred rows. */
+@media (max-width: 767px) {
+  .doctor-filter {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 16px;
+    margin-left: -12px;
+    margin-right: -12px;
+    scrollbar-width: none;
+  }
+
+  .doctor-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .doctor-filter-btn {
+    font-size: 13px;
+    padding: 8px 15px;
+    scroll-snap-align: center;
+  }
+}
+
+/*======================================
+Doctor photos — scrubs set
+The new shots are JPGs on a pure-white background rather
+than transparent cut-outs. multiply blends that white into
+the card's gradient so no white box shows, and leaves the
+older transparent PNGs untouched.
+======================================*/
+
+.doctorSwiper .doctor-image img {
+  mix-blend-mode: multiply;
+}
+
+/*======================================
+Doctor card — action buttons
+======================================*/
+
+.doctor-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.doctor-actions .view-more-btn {
+  margin: 0;
+}
+
+.doctor-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #047eb9;
+  background: transparent;
+  border: 1.5px solid #cfe4f1;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.doctor-profile-btn:hover {
+  background: #047eb9;
+  border-color: #047eb9;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*======================================
+Doctor profile page
+======================================*/
+
+.doctor-profile-section {
+  padding: 45px 0 70px;
+  background: #f4f9fc;
+}
+
+.doctor-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 22px;
+  color: #047eb9;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.doctor-back:hover {
+  color: #e31c48;
+  text-decoration: none;
+}
+
+/* Sidebar */
+
+.doctor-aside {
+  background: #fff;
+  border: 1px solid #e3eef6;
+  border-radius: 20px;
+  padding: 30px 26px;
+  position: sticky;
+  top: 24px;
+}
+
+.doctor-aside-photo {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #eaf5fb;
+  background: #fff;
+}
+
+.doctor-aside-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  mix-blend-mode: multiply;
+}
+
+.doctor-aside-name {
+  font-size: 25px;
+  font-weight: 700;
+  color: #0f2b5b;
+  margin: 0 0 6px;
+}
+
+.doctor-aside-desig {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #e31c48;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.doctor-aside-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f2b5b;
+  margin: 0 0 4px;
+}
+
+.doctor-aside-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.doctor-aside-cta {
+  display: block;
+  text-align: center;
+  background: #e31c48;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.doctor-aside-cta:hover {
+  background: #c4173c;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Content */
+
+.doctor-main {
+  background: #fff;
+  border: 1px solid #e3eef6;
+  border-radius: 20px;
+  padding: 34px 36px;
+}
+
+/* title with the rule running off to the right, as in the reference */
+.doctor-sec-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 23px;
+  font-weight: 700;
+  color: #0f2b5b;
+  margin: 34px 0 16px;
+}
+
+.doctor-main > .doctor-sec-title:first-child {
+  margin-top: 0;
+}
+
+.doctor-sec-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #dbe8f2;
+}
+
+.doctor-about {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: #4b5563;
+  margin: 0;
+}
+
+.doctor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.doctor-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 11px;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.doctor-list li::before {
+  content: "\f105"; /* chevron-right */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  color: #e31c48;
+}
+
+@media (max-width: 991px) {
+  .doctor-aside {
+    position: static;
+  }
+
+  .doctor-main {
+    padding: 26px 22px;
+  }
+
+  .doctor-sec-title {
+    font-size: 20px;
+  }
+}
+
+/* Mobile shows one card at a time, so the min-heights that keep
+   desktop cards aligned just leave gaps here. Tighten them up. */
+@media (max-width: 767px) {
+  .doctorSwiper .doctor-specialty {
+    min-height: 0;
+    margin-bottom: 10px;
+  }
+
+  .doctorSwiper .doctor-exp {
+    margin-top: 4px;
+    margin-bottom: 14px;
+  }
+
+  .doctorSwiper .doctor-content {
+    padding: 16px 18px 20px;
+  }
+}
+
+/* Scroll affordance: fade whichever edge still has pills beyond it,
+   so the row doesn't look like it simply ends. Classes are toggled
+   in main.js from the scroll position. */
+@media (max-width: 767px) {
+  .doctor-filter {
+    position: relative;
+    --fade-l: 0px;
+    --fade-r: 34px;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0,
+      #000 var(--fade-l),
+      #000 calc(100% - var(--fade-r)),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0,
+      #000 var(--fade-l),
+      #000 calc(100% - var(--fade-r)),
+      transparent 100%
+    );
+    transition: none;
+  }
+
+  .doctor-filter.at-start {
+    --fade-l: 0px;
+  }
+
+  .doctor-filter.has-prev {
+    --fade-l: 34px;
+  }
+
+  .doctor-filter.at-end {
+    --fade-r: 0px;
+  }
+
+  /* nudge arrow hinting there's more to the right */
+  .doctor-filter-hint {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(15, 43, 91, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e31c48;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    z-index: 3;
+  }
+
+  .doctor-filter-wrap {
+    position: relative;
+  }
+
+  .doctor-filter-wrap.at-end .doctor-filter-hint {
+    opacity: 0;
+  }
+}
+
+/* the hint is mobile-only */
+.doctor-filter-hint {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .doctor-filter-hint {
+    display: flex;
+  }
+}
+
+/*======================================
+Services cards — swipeable on mobile only
+Desktop keeps the stacked timeline layout.
+======================================*/
+
+@media (max-width: 900px) {
+  .services-list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* room for the card shadow so it isn't clipped by overflow */
+    padding: 6px 4px 20px;
+    scrollbar-width: none;
+  }
+
+  .services-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-row {
+    /* under 100% so the next card peeks in and signals "swipe".
+       min-width, not flex-basis: a basis can still be shrunk away
+       and the cards collapsed to ~60% of the intended size. */
+    flex: 0 0 auto;
+    width: 86%;
+    min-width: 86%;
+    max-width: 360px;
+    margin-bottom: 0;
+    scroll-snap-align: center;
+  }
+
+  /* the last card needs trailing space or it can't centre */
+  .services-list::after {
+    content: "";
+    flex: 0 0 7%;
+  }
+}
+
+/*======================================
+Procedure cards — swipeable on mobile only
+======================================*/
+
+/* Desktop: the wrapper must not create a layout box, or the
+   absolutely-positioned boxes would anchor to it instead of
+   to .procedure-circle and the whole radial layout collapses. */
+.procedure-cards {
+  display: contents;
+}
+
+@media (max-width: 991px) {
+  .procedure-cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 4px 20px;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .procedure-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .procedure-cards .procedure-box {
+    flex: 0 0 auto;
+    width: 82%;
+    min-width: 82%;
+    max-width: 330px;
+    scroll-snap-align: center;
+  }
+
+  /* trailing space so the last card can centre itself */
+  .procedure-cards::after {
+    content: "";
+    flex: 0 0 9%;
+  }
+}
+
+/* Cards for doctors with no profile document still show the button
+   so every card is the same shape — it just doesn't go anywhere. */
+.doctor-profile-btn.is-inactive {
+  cursor: default;
+}
+
+.doctor-profile-btn.is-inactive:hover {
+  background: transparent;
+  border-color: #cfe4f1;
+  color: #047eb9;
+}
+
+/*======================================
+Technology cards — clamped blurb + toggle
+Descriptions vary from 2 to 6 lines, so every card is
+pinned to 3 lines until the visitor expands it.
+======================================*/
+
+.tech-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.tech-text.is-open {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+.tech-content .tech-toggle {
+  margin-top: 14px;
+  padding: 7px 18px;
+  font-size: 14px;
+  /* the global button{} rule adds a 45px top margin */
+  margin-bottom: 0;
+}
+
+/* JS adds this when the text is short enough not to need a toggle */
+.tech-toggle[hidden] {
+  display: none;
+}
+
+/*======================================
+Testimonials — static grid on desktop
+Swiper is only initialised below 992px (see main.js);
+above it the wrapper becomes a plain 4-up grid.
+======================================*/
+
+@media (min-width: 992px) {
+  .testimonialSwiper {
+    overflow: visible;
+  }
+
+  .testimonialSwiper .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    transform: none !important;
+  }
+
+  .testimonialSwiper .swiper-slide {
+    width: auto !important;
+    margin: 0 !important;
+    height: auto;
+  }
+
+  .testimonialSwiper .swiper-pagination {
+    display: none;
+  }
+}
+
+/* the avatar is gone, so the name block no longer needs the row layout */
+.patient {
+  display: block;
+}
+
+/* Cards stretch to the tallest in the row; the name block is
+   pinned to the bottom so it lines up across all four. */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card .review {
+  flex: 1 1 auto;
+}
+
+.testimonial-card .patient {
+  margin-top: auto;
+}
+
+/*======================================
+Floating pill header
+Sits over the hero rather than pushing it down, and
+picks up a frosted background once the page scrolls.
+======================================*/
+
+.kims-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kims-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.kims-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.kims-logo img {
+  /* the source is a 5.2:1 wordmark; sizing by height alone made
+     it tiny, so it now scales on width with a height ceiling */
+  height: auto;
+  width: 230px;
+  max-height: 58px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  transition: width 0.3s ease;
+}
+
+/* the nav itself is the pill */
+.kims-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 6px 24px rgba(15, 43, 91, 0.1);
+}
+
+.kims-nav-link {
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0f2b5b;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+.kims-nav-link:hover,
+.kims-nav-link:focus-visible {
+  background: #e31c48;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* section currently in view */
+.kims-nav-link.is-current {
+  background: rgba(227, 28, 72, 0.1);
+  color: #e31c48;
+}
+
+/* condensed state after scrolling */
+.kims-header.is-scrolled {
+  padding: 8px 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(15, 43, 91, 0.08);
+}
+
+.kims-header.is-scrolled .kims-logo img {
+  width: 190px;
+}
+
+.kims-header.is-scrolled .kims-nav {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/*======================================
+Burger
+======================================*/
+
+.kims-nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 24px rgba(15, 43, 91, 0.12);
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.kims-nav-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 2px;
+  background: #0f2b5b;
+  transition: 0.3s ease;
+}
+
+.kims-nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.kims-nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.kims-nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* the header overlays the hero, so give every anchor target
+   enough offset that headings don't land underneath it */
+[id="about"],
+[id="services"],
+[id="doctors"],
+[id="infrastructure"],
+[id="events"] {
+  scroll-margin-top: 90px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/*======================================
+Mobile
+======================================*/
+
+@media (max-width: 991px) {
+  .kims-nav-toggle {
+    display: flex;
+  }
+
+  .kims-header-inner {
+    padding: 0 16px;
+  }
+
+  .kims-logo img {
+    width: 170px;
+  }
+
+  .kims-nav {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 16px;
+    left: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 18px 40px rgba(15, 43, 91, 0.16);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 0.25s ease;
+  }
+
+  .kims-header.nav-open .kims-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .kims-nav-link {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+}
+
+/*======================================
+Procedure cards — list + View More
+======================================*/
+
+.procedure-box {
+  width: 280px;
+  text-align: left;
+  padding: 20px 20px 18px;
+}
+
+.procedure-box .icon-box {
+  margin: 0 0 12px;
+}
+
+.procedure-box h5 {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  min-height: 48px;
+}
+
+.procedure-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* three items visible until expanded */
+  max-height: 84px;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.procedure-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #6b7280;
+}
+
+.procedure-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e31c48;
+}
+
+.procedure-toggle {
+  margin: 10px 0 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #e31c48;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: none;
+}
+
+.procedure-toggle:hover {
+  background: none;
+  color: #c4173c;
+  transform: none;
+}
+
+@media (max-width: 991px) {
+  .procedure-cards .procedure-box {
+    width: 86%;
+    min-width: 86%;
+    max-width: 340px;
+  }
+}
+
+/*======================================
+Procedure modal
+======================================*/
+
+.procedure-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.procedure-modal[hidden] {
+  display: none;
+}
+
+.procedure-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+.procedure-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  max-height: 82vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px 34px 30px;
+  box-shadow: 0 30px 70px rgba(15, 43, 91, 0.28);
+  animation: procModalIn 0.25s ease;
+}
+
+@keyframes procModalIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.procedure-modal-panel h3 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #0f2b5b;
+  margin: 0 0 20px;
+  padding-right: 34px;
+  line-height: 1.3;
+}
+
+.procedure-modal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.procedure-modal-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 11px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+.procedure-modal-list li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e31c48;
+}
+
+.procedure-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background: #f2f6fa;
+  color: #0f2b5b;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.procedure-modal-close:hover {
+  background: #e31c48;
+  color: #fff;
+  transform: none;
+}
+
+@media (max-width: 575px) {
+  .procedure-modal-panel {
+    padding: 26px 22px 24px;
+  }
+
+  .procedure-modal-panel h3 {
+    font-size: 20px;
+  }
+}
