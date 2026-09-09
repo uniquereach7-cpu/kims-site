@@ -4221,6 +4221,17 @@ older transparent PNGs untouched.
   mix-blend-mode: multiply;
 }
 
+/* These two square portraits include more whitespace than the rest of the set. */
+.doctorSwiper .doctor-image img[src$="Dr.Sridhar-Kasturi.jpg.jpeg"],
+.doctorSwiper .doctor-image img[src$="Dr-Aparanji.png"] {
+  transform: scale(1.12);
+}
+
+.doctorSwiper .doctor-card:hover .doctor-image img[src$="Dr.Sridhar-Kasturi.jpg.jpeg"],
+.doctorSwiper .doctor-card:hover .doctor-image img[src$="Dr-Aparanji.png"] {
+  transform: scale(1.17);
+}
+
 /*======================================
 Doctor card — action buttons
 ======================================*/
