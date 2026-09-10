@@ -2505,6 +2505,41 @@ SECTION
   overflow: hidden;
 }
 
+.testimonial-review-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.testimonial-review-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #e31c48;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.testimonial-review-button:hover {
+  background: #bd153a;
+  color: #fff;
+}
+
+.testimonial-review-button:focus-visible {
+  outline: 3px solid #122b5a;
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .testimonial-review-action {
+    justify-content: center;
+  }
+}
+
 /*=========================
 LEFT CARD
 =========================*/
